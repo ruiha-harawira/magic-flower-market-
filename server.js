@@ -2,7 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('express-handlebars')
 
-const fruitRouter = require('./routes/fruits')
+const fruitRouter = require('./routes/flower')
 
 // ------ SERVER SETUP ----------------
 
