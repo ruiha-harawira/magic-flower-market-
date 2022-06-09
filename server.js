@@ -2,7 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('express-handlebars')
 
-const fruitRouter = require('./routes/fruits')
+const flowerRouter = require('./routes/flowers')
 
 // ------ SERVER SETUP ----------------
 
@@ -17,10 +17,10 @@ server.set('view engine', 'hbs')
 
 // ------ ROUTERS + ROUTES ------------
 
-server.use('/fruits', fruitRouter)
+server.use('/', flowerRouter)
 
 server.get('/', (req, res) => {
-  res.redirect('/fruits')
+  res.redirect('/flowers')
 })
 
 module.exports = server
