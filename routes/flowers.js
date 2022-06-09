@@ -6,15 +6,18 @@ const router = express.Router()
 
 //Home page  GET /
 router.get('/', (req, res) => {
+// res.render('home', viewData)
+
   db.getAllFlowers()
     .then((flowers) => {
       const viewData = { flowers }
-      res.render('flowers', viewData)
+      console.log('viewData', viewData)
+      res.render('home', viewData)
     })
     .catch((err) => {
       res.status(500).send(err.message)
     })
-})
+  })
 
 //Edit page Get /:id/edit
 router.get('/', (req, res) => {
