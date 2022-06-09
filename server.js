@@ -20,7 +20,7 @@ server.set('view engine', 'hbs')
 server.use('/', flowerRouter)
 
 server.get('/', (req, res) => {
-  res.redirect('/flowers')
+  res.redirect('/')
 })
 
 module.exports = server
