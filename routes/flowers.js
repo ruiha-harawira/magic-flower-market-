@@ -17,12 +17,32 @@ router.get('/', (req, res) => {
 })
 
 //Edit page Get /:id/edit
-router.get('/', (req, res) => {
-  const id = Number(req.params.id)
+// router.get('/', (req, res) => {
+//   const id = Number(req.params.id)
 
-  db.getFlowerById(id).then((flower) => {
-    db.getAllpowers
-  })
-})
+//   db.getFlowerById(id).then((flower) => {
+//     db.getAllpowers
+//   })
+// })
+
+// router.get('/id:/edit', (req, res) => {
+//   const id = Number(req.params.id) 
+
+//   return db
+//     .getFlowerById(id)
+//     .then((flower) => {
+//       db.getAllPowers()
+//         .then((powers) => {
+//           const viewData = { flower, powers }
+//           res.render('edit', viewData)
+//         })
+//         .catch((err) => {
+//           res.status(500).send(err.message)
+//         })
+//     })
+//     .catch((err) => {
+//       res.status(500).send(err.message)
+//     })
+// } )
 
 module.exports = router
