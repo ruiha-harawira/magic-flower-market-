@@ -1,6 +1,29 @@
 body {
   margin: 0;
-  padding: 30px;
+  padding: 0;
   background-color: #fbe3ad;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+header {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+     url(./gabriella-clare-marino-DvCs8zhR5nk-unsplash.jpg);
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+h1 {
+  padding: 90px 0;
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
