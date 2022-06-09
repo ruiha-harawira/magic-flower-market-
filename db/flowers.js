@@ -8,6 +8,8 @@ function getAllFlowers(db = connection) {
   .join('images', 'flowers.image_id', 'images.id')
 }
 
+function getFlowerById(db = connection) {}
+
 module.exports = {
   getAllFlowers,
 }

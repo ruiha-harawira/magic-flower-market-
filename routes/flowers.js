@@ -4,15 +4,6 @@ const db = require('../db/flowers')
 
 const router = express.Router()
 
-// const viewData = {
-//   flowers: [{id:1,
-//     name:"flower one",
-//     image_url:"/no_power_red.png",
-//     power:"fire",
-//     description:"this flower makes you highly flammable",
-//   }]
-// }
-
 //Home page  GET /
 router.get('/', (req, res) => {
 // res.render('home', viewData)
@@ -27,5 +18,14 @@ router.get('/', (req, res) => {
       res.status(500).send(err.message)
     })
   })
+
+//Edit page Get /:id/edit
+router.get('/', (req, res) => {
+  const id = Number(req.params.id)
+
+  db.getFlowerById(id).then((flower) => {
+    db.getAllpowers
+  })
+})
 
 module.exports = router
