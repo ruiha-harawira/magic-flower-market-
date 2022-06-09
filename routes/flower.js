@@ -1,16 +1,16 @@
 const express = require('express')
 
-const db = require('../db/fruits')
+//const db = require('../db/fruits')
 
 const router = express.Router()
 
-// GET /fruits
+//GET /fruits
 router.get('/', (req, res) => {
-  db.getAllFruits()
-    .then((fruits) => {
-      const viewData = { fruits }
-      res.render('fruits', viewData)
-    })
+  // db.getAllFruits()
+  //   .then((fruits) => {
+  //     const viewData = { fruits }
+      res.render('test')
+    // })
 })
 
 module.exports = router
