@@ -6,6 +6,8 @@ function getAllFlowers(db = connection) {
   return db('flowers').select()
 }
 
+function getFlowerById(db = connection) {}
+
 module.exports = {
   getAllFlowers,
 }

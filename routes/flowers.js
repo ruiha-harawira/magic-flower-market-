@@ -4,7 +4,7 @@ const db = require('../db/flowers')
 
 const router = express.Router()
 
-//Home page  GET /flowers
+//Home page  GET /
 router.get('/', (req, res) => {
   db.getAllFlowers()
     .then((flowers) => {
@@ -14,6 +14,15 @@ router.get('/', (req, res) => {
     .catch((err) => {
       res.status(500).send(err.message)
     })
+})
+
+//Edit page Get /:id/edit
+router.get('/', (req, res) => {
+  const id = Number(req.params.id)
+
+  db.getFlowerById(id).then((flower) => {
+    db.getAllpowers
+  })
 })
 
 module.exports = router
