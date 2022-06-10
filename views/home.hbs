@@ -1,13 +1,13 @@
-<h2>Amazing Flowers</h2>
+<h2>Choose your flower and give it some magic</h2>
 
 <ul class= "cards">
 {{#each flowers}}
 <li class="card">
   <div class = "flower">
     <span class = "name"> {{flower_name}} </span><br>
-    <img src = {{image}} class="flowerpic">
+    <img src = {{image}} class="flowerpic"><br>
     {{#unless name }}
-    <h3> Empower me!</h3>
+    <button>Empower me!</button>
     {{/unless}}
     <h3> {{name}} </h3>
     <p> {{description}}</p>
