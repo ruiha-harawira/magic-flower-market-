@@ -50,10 +50,27 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
-// router.post('/:id/edit', (req, res) => {
-//   const { name, power_id } = req.body
-//   const id = Number(req.body.id)
+router.post('/:id/edit', (req, res) => {
+  const { name, power_id } = req.body
+  const id = Number(req.body.id)
 
-// })
+  db.getFlowerById(id)
+    .then((flower) => {
+      flower.id = id
+      flower.name = name
+      flower.power_id = power_id
+
+      db.updateFlower(flower)
+        .then(res.redirect('/'))
+
+        .catch((err) => {
+          res.status(500).send(err.message)
+        })
+    })
+    .catch((err) => {
+      res.status(500).send(err.message)
+    })
+  
+})
 
 module.exports = router
