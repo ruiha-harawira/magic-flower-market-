@@ -27,3 +27,32 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 3rem 2rem 3rem;
+}
+
+
+.card {
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: center top 10px;
+  background-color: #ECF6FA;
+  box-shadow: 5px 5px 15px #999;
+  padding: 15px;
+  margin: 10px;
+  width: 209px;
+  list-style: none;
+}
+
+.flowerpic {
+  width: 50%;
+  margin-top: 20px
+}
+
+.name {font-weight: 600;
+      font-size: larger ;}
