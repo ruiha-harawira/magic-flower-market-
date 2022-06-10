@@ -28,24 +28,32 @@ router.get('/', (req, res) => {
 //   })
 // })
 
-// router.get('/id:/edit', (req, res) => {
-//   const id = Number(req.params.id) 
+router.get('/:id/edit', (req, res) => {
+  const id = Number(req.params.id) 
 
-//   return db
-//     .getFlowerById(id)
-//     .then((flower) => {
-//       db.getAllPowers()
-//         .then((powers) => {
-//           const viewData = { flower, powers }
-//           res.render('edit', viewData)
-//         })
-//         .catch((err) => {
-//           res.status(500).send(err.message)
-//         })
-//     })
-//     .catch((err) => {
-//       res.status(500).send(err.message)
-//     })
-// } )
+  return db
+    .getFlowerById(id)
+    .then((flower) => {
+    
+      db.getAllPowers()
+        .then((powers) => {
+          
+          const viewData = { flower, powers }
+          res.render('edit', viewData)
+        })
+        .catch((err) => {
+          res.status(500).send(err.message)
+        })
+    })
+    .catch((err) => {
+      res.status(500).send(err.message)
+    })
+})
+
+// router.post('/:id/edit', (req, res) => {
+//   const { name, power_id } = req.body
+//   const id = Number(req.body.id)
+
+// })
 
 module.exports = router
