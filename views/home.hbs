@@ -1,18 +1,21 @@
 <h2>Amazing Flowers</h2>
 
-<ul class= "cards"?
+<ul class= "cards">
 {{#each flowers}}
 <li class="card">
   <div class = "flower">
-    <span class = "title"> {{name}} </span>
-    <img src = {{image}}>
-    <h3> {{power}} </h3>
+    <span class = "name"> {{flower_name}} </span><br>
+    <img src = {{image}} class="flowerpic">
+    {{#unless name }}
+    <h3> Empower me!</h3>
+    {{/unless}}
+    <h3> {{name}} </h3>
     <p> {{description}}</p>
   </div>
 </li>
 
 {{/each}}
-
+</ul>
 
 
 
