@@ -9,8 +9,10 @@
   <input class="input" type="text" id="name" name="name" placeholder="Flower name" value="{{flower.name}}">
 
   <label for="powers" class="label"> Power </label>
+
   <div class="dropdown">
-  <select class="list" id="powers" name="powerId">
+  <select class="list" id="powers" name="powerId"></select>
+
     {{#each powers}}
     <option value="{{id}}">{{name}}</option>
     {{/each}}

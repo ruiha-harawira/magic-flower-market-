@@ -2,10 +2,38 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fbe3ad;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Comfortaa', cursive;
   box-sizing: border-box;
   text-align: center;
+  font-style: normal;
 }
+
+h2 {
+  margin: 100px 100px
+}
+
+button {
+  margin-top: 50px;
+  background-color: #ECF6FA;
+  color: black;
+  border: 2px solid #fbe3ad;
+  border-radius: 12px;
+  font-family: 'Comfortaa', cursive;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 50px;
+  padding-left: 50px
+}
+
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #fbe3ad;
+  color: black;
+}
+
 
 header {
   color: white;
@@ -21,6 +49,7 @@ h1 {
   padding: 90px 0;
   margin: 0;
   font-size: 3.5rem;
+  font-family: 'Henny Penny', cursive;
 }
 
 ul {
@@ -54,3 +83,33 @@ ul {
   text-align: center;
 }
 
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 3rem 2rem 3rem;
+}
+
+
+.card {
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: center top 10px;
+  background-color: #ECF6FA;
+  box-shadow: 5px 5px 15px #999;
+  padding: 15px;
+  margin: 10px;
+  width: 209px;
+  list-style: none;
+}
+
+.flowerpic {
+  width: 50%;
+  margin-top: 20px
+}
+
+.name {
+  font-size: larger;
+  font-weight: bold;
+}
