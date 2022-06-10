@@ -22,6 +22,7 @@ return db('powers')
 }
 
 function updateFlower(flower, db = connection) {
+  console.log('in updateFlower. flower:', flower)
   return db('flowers')
     .update({
       name: flower.name,
