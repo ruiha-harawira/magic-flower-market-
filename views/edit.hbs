@@ -3,17 +3,21 @@
 <h2>Empower your flower: <span class="data">{{flower.name}}</span></h2>
 
 <form method="POST" action="/:id/edit" class="form">
-  <input type="hidden" name="id" value="{{flower.id}}">
+  <input class="input" type="hidden" name="id" value="{{flower.id}}">
 
   <label for="name" class="label"> Name </label>
-  <input type="text" id="name" name="name" placeholder="Flower name" value="{{flower.name}}">
+  <input class="input" type="text" id="name" name="name" placeholder="Flower name" value="{{flower.name}}">
 
   <label for="powers" class="label"> Power </label>
-  <select id="powers" name="power_id">
+
+  <div class="dropdown">
+  <select class="list" id="powers" name="powerId"></select>
+
     {{#each powers}}
     <option value="{{id}}">{{name}}</option>
     {{/each}}
   </select>
+  </div>
 
   <div></div>
   <button>edit</button>
