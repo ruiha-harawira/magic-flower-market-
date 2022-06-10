@@ -8,8 +8,30 @@ function getAllFlowers(db = connection) {
   .join('images', 'flowers.image_id', 'images.id')
 }
 
-function getFlowerById(db = connection) {}
+function getFlowerById(id, db = connection) { 
+  return db('flowers')
+    .where('id', id)
+    .first()
+  .select()
+}
+
+function getAllPowers(db = connection) {
+return db('powers')
+}
+
+function updateFlower(flower, db = connection) {
+  return db('flowers')
+    .update({
+      name: flower.name,
+      power_id: flower.power_id
+    
+  }).where('id', flower.id)
+}
+
 
 module.exports = {
   getAllFlowers,
+  getFlowerById,
+  getAllPowers,
+  updateFlower,
 }
